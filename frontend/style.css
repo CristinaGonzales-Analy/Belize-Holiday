@@ -1,0 +1,101 @@
+:root {
+    --hinata-violet: #4b0082;
+    --hinata-lavender: #e6e6fa;
+    --hinata-soft-purple: #9370db;
+    --bg-color: #8f6bb3;
+    --text-color: #2d1b4d;
+}
+
+body {
+    background: linear-gradient(
+        135deg, 
+        #f3e8ff 0%,    
+        #d8b4fe 35%,
+        #a855f7 70%,   
+        #6d28d9 100%   
+    );
+    
+    background-attachment: fixed;
+    min-height: 100vh;
+    
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--hinata-violet);
+    margin: 0;
+}
+
+.subtitle {
+    font-style: italic;
+    color: var(--hinata-soft-purple);
+}
+
+.item {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.accordion-btn {
+    width: 100%;
+    background-color: var(--hinata-violet);
+    color: white;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background-color: var(--hinata-soft-purple);
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel.open {
+    max-height: 500px;
+    border-top: 1px solid var(--hinata-lavender);
+    padding: 15px;
+}
+
+.holiday-card {
+    border-left: 4px solid var(--hinata-soft-purple);
+    padding: 10px;
+    margin-bottom: 10px;
+    background: var(--hinata-lavender);
+    border-radius: 4px;
+}
+
+.message-box {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--hinata-violet);
+}

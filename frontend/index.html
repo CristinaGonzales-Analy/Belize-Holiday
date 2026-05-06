@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belize Holidays 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Belize Holidays</h1>
+            <p class="subtitle">"Everyday is a holiday if you are unemployed....."</p>
+        </header>
+
+        <main id="accordion">
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/current-month', 'current-month')">
+                    Holidays this Month <span>+</span>
+                </button>
+                <div id="current-month" class="panel"></div>
+            </div>
+
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/occasions', 'occasions')">
+                    All Occasions 2026 <span>+</span>
+                </button>
+                <div id="occasions" class="panel"></div>
+            </div>
+
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/dates', 'dates')">
+                    All Holiday Dates <span>+</span>
+                </button>
+                <div id="dates" class="panel"></div>
+            </div>
+
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/today', 'today')">
+                    Is Today a Holiday? <span>+</span>
+                </button>
+                <div id="today" class="panel"></div>
+            </div>
+
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/next', 'next')">
+                    When is the Next Holiday? <span>+</span>
+                </button>
+                <div id="next" class="panel"></div>
+            </div>
+
+            <div class="item">
+                <button class="accordion-btn" onclick="apiCall('/v1/holidays/next-month', 'next-month')">
+                    Holidays Next Month <span>+</span>
+                </button>
+                <div id="next-month" class="panel"></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
